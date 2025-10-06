@@ -31,7 +31,7 @@ jobs:
               id: jobname
               run: |
                 JOB_NAME="${{github.event.inputs.deploy_value}}"
-                echo "JOB_NAME=$JOB_NAME" >> GITHUB_OUTPUT
+                echo "JOB_NAME=$JOB_NAME" >> $GITHUB_OUTPUT
             
             - name: Iniciar el Glue JOb
               id: start_glue_job
